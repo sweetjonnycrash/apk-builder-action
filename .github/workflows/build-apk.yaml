@@ -26,7 +26,10 @@ jobs:
         with:
           distribution: "temurin"
           java-version: ${{ github.event.inputs.jdkVersion }}
-
+                  
+                   - name: GitHub Actions Version Updater
+                uses: saadmk11/github-actions-version-updater@v0.8.1
+            
       - name: Clone project
         run: git clone --recurse-submodules --depth=1 ${{ github.event.inputs.repository }} workspace
 
